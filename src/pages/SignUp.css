@@ -1,0 +1,63 @@
+.signupcontainer {
+  background-color: rgb(171, 230, 235);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup {
+  background-color: white;
+  padding: 20px 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.signupinput {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(133, 133, 133);
+}
+::placeholder {
+  color: grey;
+  font-family: "Times New Roman", Times, serif;
+}
+.mdimage {
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+.profiletext {
+  color: grey;
+  font-family: "Times New Roman", Times, serif;
+  font-size: small;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.signupbtn {
+  cursor: pointer;
+  background-color: rgb(44, 163, 193);
+  border: none;
+  color: white;
+  padding: 5px;
+  transition: all 0.2s;
+}
+.signupbtn:hover {
+  background-color: rgb(20, 95, 118);
+}
+.signupbtn:active {
+  transform: scale(0.9);
+}
+.account {
+  font-size: small;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.error {
+  color: rgb(206, 39, 39);
+  font-size: small;
+}
