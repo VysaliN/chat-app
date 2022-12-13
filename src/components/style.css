@@ -1,7 +1,6 @@
 .sidebar {
   flex: 1;
   background-color: white;
-  border-right: 1px solid rgb(227, 226, 226);
 }
 
 .chat {
@@ -10,7 +9,7 @@
 }
 
 .navbar {
-  background-color: #472183;
+  background-color: #285430;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,21 +38,21 @@ img {
   font-weight: 600;
 }
 .signoutbtn {
-  background-color: rgb(225, 44, 44);
+  background-color: #5f8d4e;
   color: white;
   border: none;
   cursor: pointer;
   transition: all 0.2s;
 }
 .signoutbtn:hover {
-  background-color: rgb(194, 11, 11);
+  background-color: #285430;
 }
 .signoutbtn:active {
   transform: scale(0.9);
 }
 
 .search {
-  border-bottom: 1px solid rgb(227, 226, 226);
+  border-bottom: 1px solid rgb(197, 197, 197);
 }
 .searchinput {
   background-color: white;
@@ -79,9 +78,10 @@ img {
   gap: 10px;
   padding: 10px;
   cursor: pointer;
+  background-color: white;
 }
 .userchat:hover {
-  background-color: rgb(119, 32, 189);
+  background-color: rgb(221, 220, 220);
 }
 .userchatname {
   font-weight: 500;
@@ -95,7 +95,7 @@ img {
 .chatinfo {
   color: white;
   height: 50px;
-  background-color: rgb(119, 32, 189);
+  background-color: #5f8d4e;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -109,13 +109,17 @@ img {
 }
 
 .messages {
-  background-color: rgb(234, 231, 231);
   height: 400px;
-  overflow-y: scroll;
+  background-color: rgb(221, 220, 220);
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .owner {
   flex-direction: row-reverse;
+  color: white;
 }
 .message {
   display: flex;
@@ -127,7 +131,7 @@ img {
   margin-right: 10px;
 }
 .justnow {
-  color: rgb(148, 148, 148);
+  color: rgb(119, 118, 118);
 }
 .messagecontent {
   display: flex;
@@ -136,10 +140,9 @@ img {
   justify-content: center;
 }
 .messagetext {
-  background-color: #8249ed;
+  background-color: #a4be7b;
   /* border-radius: 10px 0px 10px 10px; */
-  border-radius: 10px;
-  color: white;
+  border-radius: 50px;
   max-width: max-content;
   padding: 5px 10px 8px 10px;
 }
@@ -150,7 +153,7 @@ img {
 }
 
 .input {
-  background-color: rgb(234, 231, 231);
+  background-color: rgb(221, 220, 220);
   height: 55px;
   display: flex;
   align-items: center;
@@ -159,7 +162,7 @@ img {
 .sendinput {
   outline: none;
   border: none;
-  background-color:white;
+  background-color: white;
   margin-left: 30px;
   padding: 10px;
   border-radius: 50px;
@@ -177,7 +180,7 @@ img {
   margin-bottom: 10px;
 }
 .sendbtn {
-  background-color: rgb(119, 32, 189);
+  background-color: #5f8d4e;
   font-size: larger;
   margin-right: 20px;
   color: white;
@@ -186,7 +189,7 @@ img {
   transition: all 0.2s;
 }
 .sendbtn:hover {
-  background-color: rgb(85, 22, 121);
+  background-color: #285430;
 }
 .sendbtn:active {
   transform: scale(0.9);

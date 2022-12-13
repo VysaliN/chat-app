@@ -26,8 +26,8 @@ const SignIn = () => {
       <div className="signin">
         <h2>Sign In</h2>
         <form onSubmit={handleSubmit}>
-          <input type="email" placeholder="email"  className="signininput"/>
-          <input type="password" placeholder="password" className="signininput"/>
+          <input type="email" placeholder="Email"  className="signininput"/>
+          <input type="password" placeholder="Password" className="signininput"/>
           <button className="signinbtn">Signin</button>
         </form>
         <span className="account">Don't have an account?

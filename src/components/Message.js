@@ -24,14 +24,13 @@ const Message = ({ message }) => {
               ? currentUser.photoURL
               : data.user.photoURL
           }
-          alt="profile"
         />
         <span className="justnow">just now</span>
       </div>
 
       <div className="messagecontent">
         {message.text && <p className="messagetext">{message.text}</p>}
-        {message.img && <img src={message.img} alt="image" className="image"/>}
+        {message.img && <img src={message.img} alt="image" className="image" />}
       </div>
     </div>
   );
