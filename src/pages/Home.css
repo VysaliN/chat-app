@@ -1,6 +1,7 @@
 .home {
-  background-color:#E5D9B6;
+  background-color: #e5d9b6;
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,5 +12,4 @@
   width: 65%;
   height: 80%;
   display: flex;
-  overflow: hidden;
 }

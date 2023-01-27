@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./style.css";
 import { MdOutlineAttachFile, MdImage } from "react-icons/md";
-import {BiSend} from "react-icons/bi";
+import { BiSend } from "react-icons/bi";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import { storage } from "../firebase";
@@ -89,7 +89,7 @@ const Input = () => {
         <label htmlFor="file">
           <MdImage className="sendimg" />
         </label>
-        <BiSend onClick={handleSend} className="sendbtn"/>
+        <BiSend onClick={handleSend} className="sendbtn" />
       </div>
     </div>
   );

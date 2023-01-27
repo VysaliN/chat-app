@@ -17,39 +17,37 @@ const SignUp = () => {
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
-      try {
-        const res = await createUserWithEmailAndPassword(auth, email, password);
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
 
-        const storageRef = ref(storage, displayName);
+      const storageRef = ref(storage, displayName);
 
-        const uploadTask = uploadBytesResumable(storageRef, file);
+      const uploadTask = uploadBytesResumable(storageRef, file);
 
-        uploadTask.on(
-          (error) => {
-            setErr(true);
-          },
-          () => {
-            getDownloadURL(uploadTask.snapshot.ref).then(
-              async (downloadURL) => {
-                await updateProfile(res.user, {
-                  displayName,
-                  photoURL: downloadURL,
-                });
-                await setDoc(doc(db, "users", res.user.uid), {
-                  uid: res.user.uid,
-                  displayName,
-                  email,
-                  photoURL: downloadURL,
-                });
-                await setDoc(doc(db, "userChats", res.user.uid), {});
-                navigate("/home");
-              }
-            );
-          }
-        );
-      } catch (err) {
-        setErr(true);
-      }
+      uploadTask.on(
+        (error) => {
+          setErr(true);
+        },
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
+              displayName,
+              photoURL: downloadURL,
+            });
+            await setDoc(doc(db, "users", res.user.uid), {
+              uid: res.user.uid,
+              displayName,
+              email,
+              photoURL: downloadURL,
+            });
+            await setDoc(doc(db, "userChats", res.user.uid), {});
+            navigate("/home");
+          });
+        }
+      );
+    } catch (err) {
+      setErr(true);
+    }
   };
 
   return (
@@ -57,8 +55,18 @@ const SignUp = () => {
       <div className="signup">
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Name" className="signupinput" required />
-          <input type="email" placeholder="Email" className="signupinput"  required/>
+          <input
+            type="text"
+            placeholder="Name"
+            className="signupinput"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="signupinput"
+            required
+          />
           <input
             type="password"
             placeholder="Password"
@@ -68,7 +76,7 @@ const SignUp = () => {
             required
           />
 
-          <input type="file" id="file" style={{ display: "none" }}  required/>
+          <input type="file" id="file" style={{ display: "none" }} required />
           <label htmlFor="file" className="mdimage">
             <MdImage />
             <span className="profiletext">Add An Avatar</span>

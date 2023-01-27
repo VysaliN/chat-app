@@ -1,11 +1,13 @@
 .sidebar {
   flex: 1;
   background-color: white;
+  overflow: hidden;
 }
 
 .chat {
   flex: 2;
   background-color: white;
+  overflow: hidden;
 }
 
 .navbar {
@@ -141,7 +143,6 @@ img {
 }
 .messagetext {
   background-color: #a4be7b;
-  /* border-radius: 10px 0px 10px 10px; */
   border-radius: 50px;
   max-width: max-content;
   padding: 5px 10px 8px 10px;

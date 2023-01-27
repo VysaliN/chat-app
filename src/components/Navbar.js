@@ -9,9 +9,11 @@ const Navbar = () => {
     <div className="navbar">
       <span className="appname">Chat App</span>
       <div className="user">
-        <img src={currentUser.photoURL} alt="profile"/>
+        <img src={currentUser.photoURL} alt="profile" />
         <span className="profilename">{currentUser.displayName}</span>
-        <button className="signoutbtn" onClick={() => signOut(auth)}>Signout</button>
+        <button className="signoutbtn" onClick={() => signOut(auth)}>
+          Signout
+        </button>
       </div>
     </div>
   );
